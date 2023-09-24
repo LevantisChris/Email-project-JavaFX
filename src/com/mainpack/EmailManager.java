@@ -1,2 +1,4 @@
-package com.mainpack;public class EmailManager {
+package com.mainpack;
+
+public class EmailManager {
 }

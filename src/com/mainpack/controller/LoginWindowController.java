@@ -5,6 +5,7 @@ import com.mainpack.view.ViewFactory;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class LoginWindowController extends BaseController {
 
@@ -23,7 +24,10 @@ public class LoginWindowController extends BaseController {
 
     @FXML
     void loginButtonAction() {
-        System.out.println("Clicked");
+        System.out.println("Log in button Clicked ...");
+        viewFactory.showMainWindow();
+        Stage stage = (Stage) errorLabel.getScene().getWindow();
+        viewFactory.closeStage(stage); // We need a reference to the stage to close it ...
     }
 
 }

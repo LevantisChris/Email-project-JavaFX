@@ -24,8 +24,14 @@ public class MainWindowController extends BaseController {
     }
 
     @FXML
-    void optionsAction(ActionEvent event) {
+    void optionsAction() {
+        viewFactory.showOptionsWindow();
+    }
 
+    @FXML
+    void addAccountAction() {
+        System.out.println("Login Window Reopen (Add account action) ...");
+        viewFactory.showLoginWindow();
     }
 
 }

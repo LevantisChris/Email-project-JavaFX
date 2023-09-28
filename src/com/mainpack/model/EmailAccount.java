@@ -13,13 +13,13 @@ public class EmailAccount {
         this.address = address;
         this.password = password;
         properties = new Properties();
-        properties.put("incomingHost", "imap.gmail.com");
+        properties.put("incomingHost", "imap.aegean.gr");
         properties.put("mail.store.protocol", "imaps");
 
         properties.put("mail.transport.protocol", "smtps");
-        properties.put("mail.smtps.host", "smtp.gmail.com");
+        properties.put("mail.smtps.host", "smtp.aegean.gr");
         properties.put("mail.smtps.auth", "true");
-        properties.put("outgoingHost", "smtp.gmail.com");
+        properties.put("outgoingHost", "smtp.aegean.gr");
     }
 
     public String getAddress() {

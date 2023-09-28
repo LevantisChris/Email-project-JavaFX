@@ -33,7 +33,19 @@ public class LoginWindowController extends BaseController {
 
             switch (loginResult) {
                 case SUCCESS:
-                    System.out.println("Login SUCCESS");
+                    System.out.println("SUCCESS ...");
+                    break;
+                case FAILED_BY_CREDENTIALS:
+                    System.out.println("FAILED_BY_CREDENTIALS ...");
+                    errorLabel.setText("Wrong credentials");
+                    return;
+                case FAILED_BY_UNEXPECTED_ERROR:
+                    System.out.println("FAILED_BY_UNEXPECTED_ERROR ...");
+                    errorLabel.setText("An unexpected error occured");
+                    return;
+                case FAILED_BY_NETWORK:
+                    System.out.println("FAILED_BY_NETWORK ...");
+                    errorLabel.setText("No internet conection");
                     return;
             }
         }

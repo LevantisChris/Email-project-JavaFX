@@ -9,5 +9,6 @@ module EmailProject {
     opens com.mainpack;
     opens com.mainpack.view;
     opens com.mainpack.controller;
+    opens com.mainpack.model;
 
 }

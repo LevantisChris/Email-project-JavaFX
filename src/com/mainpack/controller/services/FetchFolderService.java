@@ -39,12 +39,34 @@ public class FetchFolderService extends Service<Void> {
             EmailTreeItem<String> emailTreeItem = new EmailTreeItem<String>(folder.getName());
             foldersRoot.getChildren().add((emailTreeItem));
             foldersRoot.setExpanded(true);
-            System.out.println("MPIKEEE 1");
+            fetchMassagesOnFolder(folder, emailTreeItem);
             if(folder.getType() == Folder.HOLDS_FOLDERS) {
-                System.out.println("MPIKEEE");
                 Folder[] subFolders = folder.list();
                 handleFolders(subFolders, emailTreeItem); //we call it again for the subfolders, recursion
             }
         }
+    }
+
+    /* Get all the massages that are in the folders */
+    private void fetchMassagesOnFolder(Folder folder, EmailTreeItem<String> emailTreeItem) {
+        Service fetchMassagesService = new Service() {
+            @Override
+            protected Task createTask() {
+                return new Task() {
+                    @Override
+                    protected Object call() throws Exception {
+                        if(folder.getType() != Folder.HOLDS_FOLDERS) {
+                            folder.open(Folder.READ_WRITE);
+                            int folderSize = folder.getMessageCount();
+                            for(int i = folderSize; i > 0;i--) {
+                                emailTreeItem.addEmail(folder.getMessage(i));
+                            }
+                        }
+                        return null;
+                    }
+                };
+            }
+        };
+        fetchMassagesService.start();
     }
 }

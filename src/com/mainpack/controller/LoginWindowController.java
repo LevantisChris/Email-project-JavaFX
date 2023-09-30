@@ -42,7 +42,9 @@ public class LoginWindowController extends BaseController {
                     case SUCCESS:
                         System.out.println("SUCCESS ...");
                         System.out.println("Log in button Clicked ...");
-                        viewFactory.showMainWindow();
+                        if(viewFactory.isMainViewInitialized() == false) {
+                            viewFactory.showMainWindow();
+                        }
                         Stage stage = (Stage) errorLabel.getScene().getWindow();
                         viewFactory.closeStage(stage); // We need a reference to the stage to close it ...
                         return;

@@ -28,6 +28,8 @@ public class EmailMessage {
         this.message = message;
     }
 
+    /* NOTE: The getters here are reflectors, the name of the methods should respect the name of the variables */
+
     public String getSubject() {
         return this.subject.get();
     }
@@ -36,7 +38,7 @@ public class EmailMessage {
         return this.sender.get();
     }
 
-    public String getRecipent() {
+    public String getRecipient() {
         return this.recipient.get();
     }
 

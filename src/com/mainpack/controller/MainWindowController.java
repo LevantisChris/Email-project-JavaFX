@@ -89,7 +89,6 @@ public class MainWindowController extends BaseController implements Initializabl
     }
 
     private void setUpMessageSelection() {
-        System.out.println("\n\n\nKALEESSTIKE\n\n\n");
         emailWebView.setOnMouseClicked(event -> {
             EmailMessage emailMessage = emailsTableView.getSelectionModel().getSelectedItem();
             if(emailMessage != null) {
@@ -105,7 +104,7 @@ public class MainWindowController extends BaseController implements Initializabl
     }
 
     private void setUpEmailsTableView() {
-        senderCol.setCellValueFactory((new PropertyValueFactory<EmailMessage, String>("Sender")));
+        senderCol.setCellValueFactory((new PropertyValueFactory<EmailMessage, String>("sender"))); // calls the get... from the EmailMassage class
         subjectCol.setCellValueFactory((new PropertyValueFactory<EmailMessage, String>("subject")));
         recipientCol.setCellValueFactory((new PropertyValueFactory<EmailMessage, String>("recipient")));
         sizeCol.setCellValueFactory((new PropertyValueFactory<EmailMessage, SizeInteger>("size")));

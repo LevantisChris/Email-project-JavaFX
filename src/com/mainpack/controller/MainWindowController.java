@@ -66,6 +66,11 @@ public class MainWindowController extends BaseController implements Initializabl
         viewFactory.showLoginWindow();
     }
 
+    @FXML
+    void composeMessageAction(ActionEvent event) {
+        viewFactory.showComposeMessageWindow();
+    }
+
 
     private void setUpFolderSelection() {
         emailsTreeView.setOnMouseClicked(e -> {

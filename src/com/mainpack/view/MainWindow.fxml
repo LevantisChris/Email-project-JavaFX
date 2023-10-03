@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="718.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1033.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+      <MenuBar prefHeight="21.0" prefWidth="1033.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -33,8 +33,8 @@
           </Menu>
         </menus>
       </MenuBar>
-      <TreeView fx:id="emailsTreeView" layoutY="27.0" prefHeight="691.0" prefWidth="243.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="27.0" />
-      <TableView fx:id="emailsTableView" layoutX="243.0" layoutY="27.0" prefHeight="200.0" prefWidth="790.0" AnchorPane.leftAnchor="243.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+      <TreeView fx:id="emailsTreeView" focusTraversable="false" layoutX="-2.0" layoutY="23.0" prefHeight="696.0" prefWidth="248.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-2.0" AnchorPane.topAnchor="23.0" />
+      <TableView fx:id="emailsTableView" focusTraversable="false" layoutX="243.0" layoutY="23.0" prefHeight="204.0" prefWidth="790.0" AnchorPane.leftAnchor="243.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="23.0">
         <columns>
           <TableColumn fx:id="senderCol" prefWidth="143.0" text="Sender" />
           <TableColumn fx:id="subjectCol" prefWidth="184.0" text="Subject" />

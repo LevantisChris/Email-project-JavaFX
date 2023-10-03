@@ -1,5 +1,6 @@
 package com.mainpack.model;
 
+import javax.mail.Session;
 import javax.mail.Store;
 import java.util.Properties;
 
@@ -8,6 +9,17 @@ public class EmailAccount {
     private String password;
     private Properties properties;
     private Store store; // class for retrieving and recieving massages
+
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
+    }
+
+    private Session session;
+
 
     public EmailAccount(String address, String password) {
         this.address = address;
@@ -32,6 +44,11 @@ public class EmailAccount {
 
     public Properties getProperties() {
         return properties;
+    }
+
+    @Override
+    public String toString() {
+        return address;
     }
 
     public void setProperties(Properties properties) {

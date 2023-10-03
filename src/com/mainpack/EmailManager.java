@@ -5,6 +5,8 @@ import com.mainpack.controller.services.FolderUpdaterService;
 import com.mainpack.model.EmailAccount;
 import com.mainpack.model.EmailMessage;
 import com.mainpack.model.EmailTreeItem;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.TreeItem;
 
 import javax.mail.Flags;
@@ -13,6 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmailManager {
+
+    private ObservableList<EmailAccount> emailAccountObservable = FXCollections.observableArrayList();
+
+    public ObservableList<EmailAccount> getEmailAccountObservable() {
+        return emailAccountObservable;
+    }
 
     private EmailMessage selectedMessage;
 
@@ -54,6 +62,7 @@ public class EmailManager {
     }
 
     public void addEmailAccount(EmailAccount emailAccount) {
+        emailAccountObservable.add(emailAccount);
         EmailTreeItem<String> treeItem = new EmailTreeItem<String>(emailAccount.getAddress());
         treeItem.setExpanded(true);
         FetchFolderService fetchFolderService = new FetchFolderService(emailAccount.getStore(), treeItem, folderList);

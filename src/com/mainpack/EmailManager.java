@@ -5,6 +5,7 @@ import com.mainpack.controller.services.FolderUpdaterService;
 import com.mainpack.model.EmailAccount;
 import com.mainpack.model.EmailMessage;
 import com.mainpack.model.EmailTreeItem;
+import com.mainpack.view.IconResolver;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TreeItem;
@@ -15,6 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmailManager {
+
+    private IconResolver iconResolver = new IconResolver();
 
     private ObservableList<EmailAccount> emailAccountObservable = FXCollections.observableArrayList();
 
@@ -64,6 +67,7 @@ public class EmailManager {
     public void addEmailAccount(EmailAccount emailAccount) {
         emailAccountObservable.add(emailAccount);
         EmailTreeItem<String> treeItem = new EmailTreeItem<String>(emailAccount.getAddress());
+        treeItem.setGraphic(iconResolver.getIconForFolder(emailAccount.getAddress()));
         treeItem.setExpanded(true);
         FetchFolderService fetchFolderService = new FetchFolderService(emailAccount.getStore(), treeItem, folderList);
         fetchFolderService.start();

@@ -31,7 +31,7 @@ public class EmailAccount {
         properties.put("mail.transport.protocol", "smtps");
         properties.put("mail.smtps.host", "smtp.aegean.gr");
         properties.put("mail.smtps.auth", "true");
-        properties.put("outgoingHost", "smtp.aegean.gr");
+        properties.put("outgoingHost", "smtp.aegean.com"); // cannot send
     }
 
     public String getAddress() {

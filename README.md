@@ -35,7 +35,7 @@ The app has a lot of nice features like the following:
 ---
 
 <div style="display: flex; justify-content: center;">
-    <img src="./pics/2.jpg" width="700px">
+    <img src="./pics/2.JPG" width="700px">
 </div><hr>
 
 ---

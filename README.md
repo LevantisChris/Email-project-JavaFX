@@ -29,7 +29,7 @@ The app has a lot of nice features like the following:
 ## 💯 Screenshots of the app 😁
 
 <div style="display: flex; justify-content: center;">
-    <img src="./pics/1.jpg" width="400px">
+    <img src="./pics/1.JPG" width="400px">
 </div>
 
 ---
@@ -41,25 +41,25 @@ The app has a lot of nice features like the following:
 ---
 
 <div style="display: flex; justify-content: center;">
-    <img src="./pics/3.jpg" width="700px">
+    <img src="./pics/3.JPG" width="700px">
 </div><hr>
 
 ---
 
 <div style="display: flex; justify-content: center;">
-    <img src="./pics/4.jpg" width="700px">
+    <img src="./pics/4.JPG" width="700px">
 </div><hr>
 
 ---
 
 <div style="display: flex; justify-content: center;">
-    <img src="./pics/5.jpg" width="700px">
+    <img src="./pics/5.JPG" width="700px">
 </div><hr>
 
 ---
 
 <div style="display: flex; justify-content: center;">
-    <img src="./pics/6.jpg" width="700px">
+    <img src="./pics/6.JPG" width="700px">
 </div>
 
 ---
